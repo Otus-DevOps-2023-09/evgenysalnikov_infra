@@ -2,16 +2,16 @@
 evgenysalnikov Infra repository
 
 ## VPN Connection
-bastion_IP = 158.160.118.143 (https://bastion.salnikoff.com/login)
+bastion_IP = 158.160.118.143
+someinternalhost_IP = 10.128.0.19
+
 ```
+(https://bastion.salnikoff.com/login)
 "detail": "Error creating new order :: too many certificates already issued for \"nip.io\". Retry after 2023-10-20T22:00:00Z: see https://letsencrypt.org/docs/rate-limits/",
 "status": 429
 ```
-someinternalhost_IP = 10.128.0.19
 
-UserName: test
 
-Password: 6214157507237678334670591556762
 
 ## SSH
 ### SSH to internal host through bastion
