@@ -2,8 +2,8 @@
 evgenysalnikov Infra repository
 
 ## VPN Connection
-bastion_IP = bastion.salnikoff.com
-someinternalhost_IP = 10.128.0.19
+bastion_IP = 158.160.126.146
+someinternalhost_IP = 10.128.0.33
 
 ```
 (https://bastion.salnikoff.com/login)
@@ -36,5 +36,5 @@ Host someinternalhost
     IdentitiesOnly yes
     HostkeyAlgorithms +ssh-rsa
     PubkeyAcceptedAlgorithms +ssh-rsa
-    ProxyJump yacloud@158.160.118.143
+    ProxyJump yacloud@158.160.126.146
 ```
