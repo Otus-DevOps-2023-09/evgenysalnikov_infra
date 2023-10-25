@@ -2,7 +2,7 @@
 evgenysalnikov Infra repository
 
 ## VPN Connection
-bastion_IP = 158.160.118.143
+bastion_IP = bastion.salnikoff.com
 someinternalhost_IP = 10.128.0.19
 
 ```
