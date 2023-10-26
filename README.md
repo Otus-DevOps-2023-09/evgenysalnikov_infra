@@ -1,6 +1,23 @@
 # evgenysalnikov_infra
 evgenysalnikov Infra repository
 
+## Reddit APP
+testapp_IP = 158.160.125.98
+
+testapp_port = 9292
+
+### Команда для создания VM с последующим запуском приложения
+```
+yc compute instance create \
+  --name reddit-app \
+  --hostname reddit-app \
+  --memory=4 \
+  --create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-lts,size=10GB \
+  --network-interface subnet-name=default-ru-central1-a,nat-ip-version=ipv4 \
+  --metadata serial-port-enable=1 \
+  --metadata-from-file user-data=user_metadata.yaml
+```
+
 ## VPN Connection
 bastion_IP = 158.160.126.146
 someinternalhost_IP = 10.128.0.33
