@@ -18,6 +18,12 @@ yc compute instance create \
   --metadata-from-file user-data=user_metadata.yaml
 ```
 
+### Сделано
+- Создан базовый образ packer/ubuntu.json
+- Создан полный образ приложения (приложение сразу запускается) packer/immutable.json
+- Переменные вынесены в отдельный файл variables.json
+- Создан скрипт создания виртуальной машины с автоматическим запуском приложения
+
 ## VPN Connection
 bastion_IP = 158.160.126.146
 someinternalhost_IP = 10.128.0.33

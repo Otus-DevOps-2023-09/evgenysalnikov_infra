@@ -1,0 +1,8 @@
+#cloud-config
+users:
+  - name: yacloud
+    groups: sudo
+    shell: /bin/bash
+    sudo: 'ALL=(ALL) NOPASSWD:ALL'
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCeneTFmsKSN8jbEl5aK1NvvF8LY0DffTOr07X85K1ftC+WZ3YFB7/RNYlB+HQ0G+WkHe81N+SbtHiGin6HnW/FjFj9IdbcpED2SXCF7+vCtPxg4ZzbhJnFIIZd0V7+Nh1xGBpflBbUmaB4Ia8mkXXBFyUmYAeXsFt1dAsHB4iB6EB2vdqoWGGT5h648/Tzwb7CzN7gio8pTQn3F7VsOfRB1k+S/LGvSdJMrW4Zd9ei13mTNfo4n4jTPZt4Tc3zFrp2rbvoaW4fwx16RujXAchdYHoJdlWAQIgQ8Xck4UGE93MW9rP4V3YGCSKm1IjsRg55X5XToNLVRzLkxkRFXvpYF5pY2chchQRH1WJxiusubMBYHgvDc94ssQuHVywjU0Qo4cImLlcinWhYn03MjZ9+dL+WOT9+chcHJ5sYxGscdBykbIINCo1X69PLGp9hn1bKOR/JSERM6Jk4Ei5VAVdDb2VxGjw2sOb8DCGPpye7iRBvvU46GSsWIKebHZ09gc0= yacloud
