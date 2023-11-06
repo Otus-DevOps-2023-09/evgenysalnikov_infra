@@ -1,6 +1,13 @@
 # evgenysalnikov_infra
 evgenysalnikov Infra repository
 
+## Terraform
+
+### Terraform 1
+- создание инстанса reddit-app из базового образа
+- создание нескольких инстансов reddit-app указывая их кол-во. По-умолчанию 1
+- создание балансировщика смотрящего на reddit-app инстансы
+
 ## Reddit APP
 testapp_IP = 158.160.125.98
 
