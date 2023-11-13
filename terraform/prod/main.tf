@@ -28,3 +28,9 @@ module "db" {
   subnet_id       = var.subnet_id
   environment     = var.environment
 }
+module "deploy" {
+  source = "../modules/deploy"
+  external_ip_address_app = module.app.external_ip_address_app
+  external_ip_address_db = module.db.external_ip_address_db
+  app_private_key_path = "~/.ssh/terraform"
+}

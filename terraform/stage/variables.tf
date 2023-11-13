@@ -40,3 +40,6 @@ variable "db_disk_image" {
 variable "environment" {
   description = "Environment name"
 }
+variable "terraform_backend_s3_bucket" {
+  description = "S3 bucket for terraform backend"
+}
