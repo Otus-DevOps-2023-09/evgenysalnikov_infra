@@ -1,0 +1,13 @@
+cloud_id                 = "b2g7me15kd3p37dre4us"
+folder_id                = "b2g4k56g0jmpbbdq0miv"
+#zone = "ru-central1-a"
+image_id                 = "fd8ihcetk4ehnk7aoja8"
+public_key_path          = "~/.ssh/terraform.pub"
+subnet_id                = "e9b0h9m5cjr1gug3p7im"
+service_account_key_file = "/Users/evgenijsalnikov/Documents/otusDevOps/key.json"
+private_key_path         = "~/.ssh/terraform"
+reddit_app_count         = 1
+app_disk_image           = "fd8ns1gnesp4defsvp1g"
+db_disk_image            = "fd8csvta5vldtq2ur4s9"
+environment = "prod"
+terraform_backend_s3_bucket = "stage-20231110142744905600000001"

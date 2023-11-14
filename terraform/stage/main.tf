@@ -29,7 +29,7 @@ module "db" {
   environment     = var.environment
 }
 module "deploy" {
-  source = "../modules/deploy"
+  source = "../modules/vpc"
   external_ip_address_app = module.app.external_ip_address_app
   external_ip_address_db = module.db.external_ip_address_db
   app_private_key_path = var.private_key_path
