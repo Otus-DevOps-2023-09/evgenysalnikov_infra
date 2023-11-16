@@ -1,3 +1,6 @@
+variable "service_account_key_file" {
+  description = "key.json"
+}
 variable "cloud_id" {
   description = "Cloud"
 }
@@ -9,23 +12,24 @@ variable "zone" {
   # Значение по умолчанию
   default = "ru-central1-a"
 }
-variable "public_key_path" {
-  # Описание переменной
-  description = "Path to the public key used for ssh access"
+variable "service_account_id" {
+  description = "Service account id"
+  type        = string
 }
-variable "image_id" {
-  description = "Disk image"
-}
-variable "subnet_id" {
-  description = "Subnet"
-}
-variable "service_account_key_file" {
-  description = "key.json"
-}
-variable "private_key_path" {
-  # Описание переменной
-  description = "Path to the private key used for ssh access"
-}
-variable "reddit_app_count" {
-  default = 1
+variable "buckets" {
+  description = "List of buckets params"
+  type = map(object({
+    access_key = string
+    secret_key = string
+  }))
+  default = {
+    "stage" = {
+      access_key = "stage_access_key"
+      secret_key = "stage_secret_key"
+    }
+    "prod" = {
+      access_key = "prod_access_key"
+      secret_key = "prod_secret_key"
+    }
+  }
 }
