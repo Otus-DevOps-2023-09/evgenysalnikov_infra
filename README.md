@@ -1,6 +1,20 @@
 # evgenysalnikov_infra
 evgenysalnikov Infra repository
 
+## Ansible
+### Ansible 1
+#### Homework ansible-1
+`Теперь выполните ansible app -m command -a 'rm -rf ~/reddit' и проверьте еще раз выполнение плейбука. Что изменилось и почему? Добавьте информацию в README.md .`
+changed=1 стало 1, было 0. Произошло потому что в этот раз git успешно клонировал репозиторий которого не было.
+#### Сделано:
+- добавлен просто inventory
+- добавлен playbook
+- добавлен файл с конфигурацией ansible.cfg
+- добавлен inventory файл в формате yml
+- добавлен inventory.json
+- добавлен скрипт для dynamic inventory - dynamic_inventory.sh
+
+
 ## Terraform
 
 ### Terraform 2
