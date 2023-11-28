@@ -1,0 +1,10 @@
+---
+- name: Configure DB Host
+  hosts: default
+  become: true
+  tasks:
+    - name: Install packages
+      apt:
+        name: mongodb
+        state: present
+        update_cache: yes
