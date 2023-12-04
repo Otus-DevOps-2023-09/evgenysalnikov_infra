@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  # -------------------------------------------------------------
+  # Event `pull_request`: Returns all changed pull request files.
+  # --------------------------------------------------------------
+  changed_files:
+    # NOTE:
+    # - This is limited to pull_request* events and would raise an error for other events.
+    # - A maximum of 3000 files can be returned.
+    # - For more flexibility and no limitations see "Using local .git history" above.
+
+    runs-on: ubuntu-latest  # windows-latest || macos-latest
+    name: Test changed packer files
+    permissions:
+      pull-requests: read
+
+    steps:
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v40
+        with:
+          files: packer/*.json
+
+      - name: List all changed files
+        run: |
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            echo "$file was changed"
+            packer validate -var-file=variables.json.example $file
+          done
