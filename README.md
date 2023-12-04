@@ -2,6 +2,12 @@
 evgenysalnikov Infra repository
 
 ## Ansible
+### Ansible 2
+#### Homework ansible-2
+ - создан плейбук site.yml объединяющий в себе несколько ролей для деплоя приложения
+ - используется получение адреса хоста с бд из динамического инвентори
+ - выполнены задания со *
+ - packer использует ansible для создания образов
 ### Ansible 1
 #### Homework ansible-1
 `Теперь выполните ansible app -m command -a 'rm -rf ~/reddit' и проверьте еще раз выполнение плейбука. Что изменилось и почему? Добавьте информацию в README.md .`
