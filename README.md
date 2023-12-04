@@ -2,6 +2,14 @@
 evgenysalnikov Infra repository
 
 ## Ansible
+### Ansible 3
+#### Homework ansible-3
+ - созданы роли для app и db
+ - плейбуки переделаны на использование ролей
+ - добавлена работа с vault
+ - созданы два окружения с динамическим инвентори
+ - применена роль из ansible galaxy для настройки nginx
+
 ### Ansible 2
 #### Homework ansible-2
  - создан плейбук site.yml объединяющий в себе несколько ролей для деплоя приложения
