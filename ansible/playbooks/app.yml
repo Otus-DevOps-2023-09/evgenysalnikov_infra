@@ -1,0 +1,9 @@
+---
+- name: Configure App
+  hosts: app
+  become: true
+#  vars:
+#    db_host: "{{ hostvars[groups['db'][0]].inventory_hostname }}"
+  roles:
+    - app
+    - jdauphant.nginx
