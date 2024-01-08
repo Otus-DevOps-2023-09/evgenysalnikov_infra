@@ -9,3 +9,5 @@
 *.retry
 /terraform/.terraform/
 /ansible/roles/jdauphant.nginx/
+/ansible/my_env/
+/ansible/.vagrant/

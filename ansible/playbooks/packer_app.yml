@@ -3,6 +3,11 @@
   hosts: default
   become: true
   tasks:
+    - name: Update and upgrade apt packages
+      apt:
+        upgrade: yes
+        update_cache: yes
+
     - name: Install packages
       apt:
         name:

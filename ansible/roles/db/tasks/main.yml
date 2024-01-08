@@ -3,6 +3,9 @@
   debug:
     msg: "This host is in {{ env }} environment!!!"
 
+- include_tasks: install_mongo.yml
+- include_tasks: config_mongo.yml
+
 - name: Change mongo config file
   template:
     src: mongodb.conf.j2
