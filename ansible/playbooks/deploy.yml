@@ -8,7 +8,7 @@
       become_user: ubuntu
       git:
         repo: 'https://github.com/express42/reddit.git'
-        dest: /home/ubuntu/reddit
+        dest: /home/{{ deploy_user }}/reddit
         version: monolith
       notify: reload puma
 
@@ -17,7 +17,7 @@
       become_user: ubuntu
       bundler:
         state: present
-        chdir: /home/ubuntu/reddit
+        chdir: /home/{{ deploy_user }}/reddit
   handlers:
     - name: reload puma
       systemd: name=puma state=restarted
